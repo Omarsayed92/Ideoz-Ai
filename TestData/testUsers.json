@@ -14,11 +14,10 @@
             "existingPassword": "P@ssw0rd123"
         }
     ],
-    
     "loginCredentials": {
         "validUser": {
-            "email": "test@example.com",
-            "password": "P@ssw0rd123"
+            "email": "testtt@example.com",
+            "password": "NewPassw0rd!"
         },
         "invalidCredentials": {
             "email": "validuser@example.com",

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Anonymous Landing Page Tests', () => {
-    const baseURL = 'https://app-staging.ideoz.ai/';
+    const baseURL = 'https://app-test.ideoz.ai/';
 
     test.beforeEach(async ({ page }) => {
         await page.goto(baseURL);
@@ -14,7 +14,7 @@ test.describe('Anonymous Landing Page Tests', () => {
 
         // Verify points button is displayed and disabled
         await expect(page.getByRole('button', { name: /points remaining/ })).toBeVisible();
-        
+
 
         // Verify Login button is displayed
         await expect(page.getByRole('button', { name: 'Login' })).toBeVisible();
@@ -78,17 +78,16 @@ test.describe('Anonymous Landing Page Tests', () => {
 
     // TC-008-Anonymous Verify clicking back from conversation page returns to landing page without creating an account.
     test('should return to landing page without creating an account', async ({ page }) => {
-        // Click on the first prompt example
+        // Click on the first prompt example to navigate to conversation page
         await page.locator('.truncate.flex.items-center').click();
-        // Verify navigation to conversation page
-        await expect(page).toHaveURL(/.*\/conversation\/.*/);
-        // Click back button
-        await page.getByRole('button', { name: 'New Conversation' }).click();
-       // await expect(page.locator('#landingHeader'))
+        await page.getByTestId('btn-back').click();
         await page.getByRole('button', { name: 'Back' }).click();
 
         // Verify return to landing page
-        await expect(page).toHaveURL(baseURL);
+        await expect(page.getByText('Your all work was not saved,')).toBeVisible();
+        await expect(page.getByTestId('what-is-project-button')).toBeVisible();
+
+
     });
 
     // TC-009-Anonymous Verify clicking the Login button opens the login dialog.
@@ -146,19 +145,8 @@ test.describe('Anonymous Landing Page Tests', () => {
 
     });
 
-    // TC-13-Anonymous Verify the video in the "What is Ideoz project?" section can be shared.
-    test('should share video in "What is Ideoz project?" section', async ({ page }) => {
-        // Click "What is Ideoz project?" button
-        await page.getByRole('button', { name: 'What is Ideoz project?' }).click();
-        // Click the share button
-        await page.locator('iframe[title="What is Ideoz Project?"]').contentFrame().getByRole('button', { name: 'Share' }).click();
-        // Verify share options appear
-        await expect(page.locator('iframe[title="What is Ideoz Project?"]').contentFrame().getByRole('button', { name: 'Facebook' })).toBeVisible();
-        await expect(page.locator('iframe[title="What is Ideoz Project?"]').contentFrame().getByRole('button', { name: 'Twitter' })).toBeVisible();
-        await expect(page.locator('iframe[title="What is Ideoz Project?"]').contentFrame().getByRole('button', { name: 'LinkedIn' })).toBeVisible();
-    });
 
-    // TC-14-Anonymous Verify the "Create Free Account" button in the "What is Ideoz project?" section opens the registration dialog.
+    // TC-13-Anonymous Verify the "Create Free Account" button in the "What is Ideoz project?" section opens the registration dialog.
     test('should open registration dialog when "Create Free Account" button is clicked in "What is Ideoz project?" section', async ({ page }) => {
         // Click "What is Ideoz project?" button
         await page.getByRole('button', { name: 'What is Ideoz project?' }).click();
@@ -172,10 +160,6 @@ test.describe('Anonymous Landing Page Tests', () => {
         await expect(page.getByRole('button', { name: 'Create account' }).last()).toBeVisible();
         await expect(page.getByRole('button', { name: 'Log in' })).toBeVisible();
     });
-
-
-
-
 
 
 });

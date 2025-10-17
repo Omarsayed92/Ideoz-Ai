@@ -46,7 +46,7 @@ test('should keep Create account button disabled when Password field is empty', 
 });
 
 //TC 005 - Form Validation - Field Format
-test('should accept English characters in Name field', async ({ page }) => {
+test('Verify successful form submission with valid data', async ({ page }) => {
 
     await createaccount.fillName(testUsers.users[0].name);
     await createaccount.fillEmail(testUsers.users[0].email);
@@ -68,10 +68,17 @@ test('should show error for invalid email format', async ({ page }) => {
     await createaccount.fillPassword(testUsers.users[0].password);
     await createaccount.clickCreateAccount();
 
-    //Error message appears under Email field
-    await expect(page.locator('text=/invalid.*email/i').first()).toBeVisible({ timeout: 5000 });
+    // Check if browser's native validation is preventing submission
+    const emailValidity = await createaccount.emailfield.evaluate(
+        (el: HTMLInputElement) => el.validity.valid
+    );
+    expect(emailValidity).toBe(false); // Email should be invalid
 
+    // Verify the create account button is still visible (form didn't submit)
+    await expect(createaccount.createaccountbutton).toBeVisible();
 });
+
+
 
 //TC 007 - Form Validation - Password Validation (less than 8 characters)
 test('Verify "Password" does not meet minimum length (less than 8 characters)', async ({ page }) => {

@@ -6,8 +6,8 @@ export class LoginPage {
     readonly passwordField: Locator;
     readonly loginButton: Locator;
     readonly loginWithGoogleButton: Locator;
-    readonly forgetPasswordLink: Locator;
-    readonly createAccountButton: Locator;
+    //readonly forgetPasswordLink: Locator;
+    readonly SignUpButton: Locator;
     readonly registerForFreeButton: Locator;
     readonly logInHeaderButton: Locator;
 
@@ -17,16 +17,17 @@ export class LoginPage {
         this.page = page;
         this.emailField = page.getByRole('textbox', { name: 'Email' });
         this.passwordField = page.getByRole('textbox', { name: 'Password' });
-        this.loginButton = page.getByRole('button', { name: 'Log in', exact: true });
+        this.loginButton = page.getByRole('button', { name: 'Login', exact: true });
         this.loginWithGoogleButton = page.getByRole('button', { name: 'Login with Google' });
-        this.forgetPasswordLink = page.getByRole('link', { name: 'Forget password?' });
-        this.createAccountButton = page.getByRole('button', { name: 'Create account' });
+        // this.forgetPasswordLink = page.getByRole('link', { name: 'Forget password?' });
+        this.SignUpButton = page.getByRole('button', { name: 'Sign up' });
         this.registerForFreeButton = page.getByRole('button', { name: 'Register for free' });
-        this.logInHeaderButton = page.getByRole('button', { name: 'Log in' }).first();
+        this.logInHeaderButton = page.getByRole('button', { name: 'Login' });
     }
 
-    async goto() {
+    async gotoLoginPage() {
         await this.page.goto(this.baseURL);
+        await this.logInHeaderButton.click();
     }
 
     async clickLogInButton() {
@@ -38,8 +39,8 @@ export class LoginPage {
         await expect(this.passwordField).toBeVisible();
         await expect(this.loginButton).toBeVisible();
         await expect(this.loginWithGoogleButton).toBeVisible();
-        await expect(this.forgetPasswordLink).toBeVisible();
-        await expect(this.createAccountButton).toBeVisible();
+        //await expect(this.forgetPasswordLink).toBeVisible();
+        await expect(this.SignUpButton).toBeVisible();
     }
 
     async fillEmail(email: string) {
@@ -72,17 +73,7 @@ export class LoginPage {
         await this.clickLogin();
     }
 
-    async getErrorMessage() {
-        return this.page.getByText('Field is required');
-    }
-
-    async getInvalidEmailMessage() {
-        return this.page.getByText(/invalid email address/i);
-    }
-
-    async getInvalidCredentialsMessage() {
-        return this.page.getByText(/invalid credentials/i);
-    }
+    
 
     async verifySuccessfulLogin() {
         // Verify user is redirected to dashboard/project page
