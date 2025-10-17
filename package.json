@@ -1,0 +1,26 @@
+{
+  "name": "ideoz-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:report": "rimraf allure-report allure-results && mkdirp allure-report allure-results",
+    "generate:report": "allure generate allure-results -o allure-report --clean",
+    "open:report": "allure open allure-report",
+    "pretest": "npm run clean:report",
+    "posttest": "npm run generate:report && npm run open:report",
+    "test": "npx playwright test --reporter=allure-playwright",
+    "test:report": "npm run clean:report && npx playwright test --reporter=allure-playwright && npm run generate:report && npm run open:report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0",
+    "allure-playwright": "^3.4.1",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^6.0.1"
+  }
+}

@@ -1,0 +1,51 @@
+{
+    "users": [
+        {
+            "name": "Test User",
+            "email": "testtt@example.com",
+            "password": "P@ssw0rd123",
+            "invalidEmail": "invalid-email",
+            "shortPassword": "Pwd!1",
+            "passwordWithoutNumber": "Password!!",
+            "passwordWithoutUppercase": "password123!!",
+            "passwordWithoutLowercase": "PASSWORD123!!",
+            "passwordWithoutSymbol": "Password123",
+            "existingEmail": "test01@example.com",
+            "existingPassword": "P@ssw0rd123"
+        }
+    ],
+    
+    "loginCredentials": {
+        "validUser": {
+            "email": "test@example.com",
+            "password": "P@ssw0rd123"
+        },
+        "invalidCredentials": {
+            "email": "validuser@example.com",
+            "password": "WrongPassword123!"
+        },
+        "nonExistentUser": {
+            "email": "nonexistent@example.com",
+            "password": "SomePassword123!"
+        },
+        "invalidEmailFormats": [
+            "invalidemail",
+            "invalid@",
+            "@example.com",
+            "invalid@.com",
+            "invalid..user@example.com"
+        ],
+        "invalidPasswords": [
+            "Pass1",
+            "short",
+            "12345",
+            ""
+        ],
+        "validEmailFormats": [
+            "user@example.com",
+            "user+test@example.com",
+            "user.name@example.com",
+            "user_name@example.co.uk"
+        ]
+    }
+}

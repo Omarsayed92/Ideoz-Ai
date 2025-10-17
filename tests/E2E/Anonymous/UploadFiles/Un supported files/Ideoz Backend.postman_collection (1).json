@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "6bfd6e81-cdf5-4cfb-9413-ef43320d439b",
+		"name": "Ideoz Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31850055",
+		"_collection_link": "https://sieraj-0901.postman.co/workspace/Ideoz-Backend~fdc59069-1232-41b2-a67d-69102e2e6efd/collection/31850055-6bfd6e81-cdf5-4cfb-9413-ef43320d439b?action=share&source=collection_link&creator=31850055"
+	},
+	"item": [
+		{
+			"name": "Code Generator",
+			"item": [
+				{
+					"name": "upload images",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "App-Key",
+								"value": "{{appKey}}",
+								"type": "text"
+							},
+							{
+								"key": "Ideoz-Access-Token",
+								"value": "{{ideozToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "App-Key",
+								"value": "{{appKey}}",
+								"type": "text"
+							},
+							{
+								"key": "Ideoz-Access-Token",
+								"value": "{{ideozToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new project\",\r\n    \"userId\": \"userId-123\",\r\n    \"chats\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/projects",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/projects/vopqjulat0qnh26ii2duhpmc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								"vopqjulat0qnh26ii2duhpmc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "App-Key",
+								"value": "{{appKey}}",
+								"type": "text"
+							},
+							{
+								"key": "Ideoz-Access-Token",
+								"value": "{{ideozToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/projects",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "new project",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chats\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/projects/vopqjulat0qnh26ii2duhpmc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"projects",
+								"vopqjulat0qnh26ii2duhpmc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get By UserId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"userId-123\",\r\n    \"projectId\": \"z30hmsvi7y44yv743ax6h8n8\",\r\n    \"chat_title\": \"title\",\r\n    \"chat_type\": \"persona\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/chats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "App-Key",
+								"value": "{{appKey}}",
+								"type": "text"
+							},
+							{
+								"key": "Ideoz-Access-Token",
+								"value": "{{ideozToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/chats?filters[userId]=userId-123&limit=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats"
+							],
+							"query": [
+								{
+									"key": "filters[userId]",
+									"value": "userId-123"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chats/users/userId-123?projectId=z30hmsvi7y44yv743ax6h8n8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats",
+								"users",
+								"userId-123"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "z30hmsvi7y44yv743ax6h8n8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chat_title\": \"title updated!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/chats/yggf8i5u6ans9e3fqlb2ge7n",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats",
+								"yggf8i5u6ans9e3fqlb2ge7n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chats/yggf8i5u6ans9e3fqlb2ge7n",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats",
+								"yggf8i5u6ans9e3fqlb2ge7n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chats/yggf8i5u6ans9e3fqlb2ge7n",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats",
+								"yggf8i5u6ans9e3fqlb2ge7n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Design Component",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/design-components",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"design-components"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"components\": \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/design-components/pubbpfhuplxwp0ep7uat0tqf",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"design-components",
+								"pubbpfhuplxwp0ep7uat0tqf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By UserId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"components\": \r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/design-components/users/userId-123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"design-components",
+								"users",
+								"userId-123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
