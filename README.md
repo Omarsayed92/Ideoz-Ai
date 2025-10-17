@@ -1,8 +1,5 @@
-# Ideoz E2E Testing Suite 🚀
+# Ideoz Ai Testing Suite 🚀
 
-[![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Allure](https://img.shields.io/badge/Allure-FF6C37?style=for-the-badge&logo=qameta&logoColor=white)](https://docs.qameta.io/allure/)
 
 ## Overview
 
@@ -329,87 +326,6 @@ This removes:
 - 🔄 Automatic retries on CI/CD
 - ⚡ Parallel test execution for faster runs
 
-### Test Data (`TestData/testUsers.json`)
-
-**Structure:**
-```json
-{
-  "loginCredentials": {
-    "validUser": { "email": "...", "password": "..." },
-    "invalidCredentials": { "email": "...", "password": "..." },
-    "invalidEmailFormats": ["...", "..."]
-  },
-  "users": [
-    {
-      "name": "Test User",
-      "email": "testuser@example.com",
-      "password": "Test@123",
-      "shortPassword": "Test@1",
-      "noNumber": "Test@abc",
-      "noUppercase": "test@123",
-      "noLowercase": "TEST@123",
-      "noSpecialChar": "Test1234",
-      "existingEmail": "testtt@example.com"
-    }
-  ]
-}
-```
-
-**Contains:**
-- ✅ Valid user credentials for successful login
-- ❌ Invalid credentials for negative testing
-- 📧 Invalid email formats for validation
-- 🔐 Password validation test cases
-- 👤 Existing user data for duplicate detection
-
-## 📝 Writing New Tests
-
-### Page Object Model Pattern
-
-This project uses the **Page Object Model (POM)** pattern for maintainable and reusable test code.
-
-#### Page Object Example
-```typescript
-// tests/Page/Login.ts
-import { Page, Locator } from '@playwright/test';
-
-export class LoginPage {
-  readonly page: Page;
-  readonly emailField: Locator;
-  readonly passwordField: Locator;
-  readonly loginButton: Locator;
-
-  constructor(page: Page) {
-    this.page = page;
-    this.emailField = page.getByRole('textbox', { name: 'Email' });
-    this.passwordField = page.getByRole('textbox', { name: 'Password' });
-    this.loginButton = page.getByRole('button', { name: 'Login' });
-  }
-
-  async gotoLoginPage() {
-    await this.page.goto('https://app-test.ideoz.ai/login');
-  }
-
-  async fillEmail(email: string) {
-    await this.emailField.fill(email);
-  }
-
-  async fillPassword(password: string) {
-    await this.passwordField.fill(password);
-  }
-
-  async clickLogin() {
-    await this.loginButton.click();
-  }
-
-  async login(email: string, password: string) {
-    await this.fillEmail(email);
-    await this.fillPassword(password);
-    await this.clickLogin();
-  }
-}
-```
-
 
 
 
@@ -550,16 +466,7 @@ When adding new tests, create/update markdown documentation:
 - ✅ Support CI/CD integration
 - ✅ Facilitate easy maintenance and scalability
 
-## 📈 Future Roadmap
 
-- [ ] Add API testing layer
-- [ ] Integrate with CI/CD pipeline (GitHub Actions)
-- [ ] Add visual regression testing
-- [ ] Implement cross-browser testing (Firefox, Safari)
-- [ ] Add mobile viewport testing
-- [ ] Performance testing integration
-- [ ] Accessibility testing (a11y)
-- [ ] Test data generation/seeding scripts
 
 ## 📧 Support & Contact
 
@@ -584,7 +491,7 @@ Built with:
 
 ---
 
-**Project**: Ideoz E2E Testing Suite  
+**Project**: Ideoz Ai 
 **Last Updated**: October 18, 2025  
 **Version**: 1.0.0  
 **Status**: ✅ Active Development
