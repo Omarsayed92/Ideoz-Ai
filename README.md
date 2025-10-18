@@ -32,11 +32,11 @@ Ideoz E2E/
 │   │   │                
 │   │   └── Anonymous/                              # Anonymous user test suites
 │   │       ├── Landing.spec.ts                     # 13 landing page tests
-│   │       └── Upload-files-in-chat-area.spec.ts   # File upload tests
+│   │       └── Anonymous-Register.spec.ts          # Anonymous-Register tests
 │   ├── Page/                                       # Page Object Model
 │   │   ├── Createaccount.ts                        # Create account page object
 │   │   ├── Login.ts                                # Login page object
-│   │   └── Profile.ts                              # Profile page object (40+ locators)
+│   │   └── Profile.ts                              # Profile page object 
 │   └── Test Cases/                                 # Test Documentation
 │       ├── LOGIN_TEST_SUITE.md                     # Login test documentation
 │       ├── CREATE_ACCOUNT_TEST_SUITE.md            # Create account test docs
@@ -61,9 +61,10 @@ Ideoz E2E/
 |--------|-----------|--------|-----------|
 | **Login** | 11 | ✅ Active | 100% |
 | **Create Account** | 16 | ✅ Active | 100% |
-| **Profile & More Menu** | 27 | ✅ Active | 96% (26/27) |
+| **Profile & More Menu** | 27 | ✅ Active | 100%  |
 | **Landing Page** | 13 | ✅ Active | 100% |
-| **Total** | **67+** | ✅ Active | **~99%** |
+| **Anonymous Register** | 8 | ✅ Active | 100% |
+| **Total** | **75+** | ✅ Active | **100%** |
 
 ### 🔐 Authentication Tests (Login - 11 Tests)
 - ✅ Page redirection and element visibility
@@ -108,7 +109,16 @@ Ideoz E2E/
 - ✅ Logout functionality with confirmation
 - ✅ Cancel logout action
 
-### 🌐 Landing Page Tests (Anonymous - 13 Tests)
+### 🕵️ Anonymous Register Tests (8 Tests)
+- ✅ "Create free account" button opens registration dialog
+- ✅ Registration dialog shows Google auth option
+- ✅ Successful account creation and auto-login from main and info section
+- ✅ Anonymous user can use plugin/chat without registration
+- ✅ "Register for free" button in chat opens registration dialog
+- ✅ Successful registration and auto-login from chat
+- ✅ Banner appears when skipping registration in chat
+
+### 🌐 Landing Page Tests (13 Tests)
 - ✅ Header elements display (Logo, Points, Login, Register)
 - ✅ Main heading and subheading
 - ✅ User challenge input area
@@ -121,7 +131,6 @@ Ideoz E2E/
 - ✅ "What is Ideoz project?" video dialog
 - ✅ Video playback functionality
 - ✅ Registration from video dialog
-
 
 ## 🛠️ Prerequisites
 
@@ -246,6 +255,8 @@ Comprehensive test suite documentation is available in `tests/Test Cases/`:
 | [CREATE_ACCOUNT_TEST_SUITE.md](tests/Test%20Cases/CREATE_ACCOUNT_TEST_SUITE.md) | Account creation test documentation | 16 tests |
 | [PROFILE_TEST_SUITE.md](tests/Test%20Cases/PROFILE_TEST_SUITE.md) | Profile & More Menu test documentation | 27 tests |
 | [LANDING_TEST_SUITE.md](tests/Test%20Cases/LANDING_TEST_SUITE.md) | Landing page test documentation | 13 tests |
+| [ANONYMOUS_REGISTER_TEST_SUITE.md](tests/Test%20Cases/ANONYMOUS_REGISTER_TEST_SUITE.md) | Anonymous registration flow test documentation | 8 tests |
+
 
 Each document includes:
 - Detailed test case descriptions with TC IDs
@@ -254,6 +265,9 @@ Each document includes:
 - Test data requirements
 - Page Object Model documentation
 - Run commands for specific scenarios
+
+#### New Test Case File
+- [ANONYMOUS_REGISTER_TEST_SUITE.md](tests/Test%20Cases/ANONYMOUS_REGISTER_TEST_SUITE.md): Step-by-step documentation for anonymous registration and related flows.
 
 ### 📈 Allure Report (Recommended)
 
@@ -454,7 +468,7 @@ When adding new tests, create/update markdown documentation:
 
 ### Useful Links
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/) - TypeScript documentation
-- [GitHub Repository](https://github.com/OmarSayedQA/Ideoz-E2E) - Project repository
+- [GitHub Repository](https://github.com/OmarSayedQA/Ideoz-Ai) - Project repository
 - [Ideoz AI Application](https://app-test.ideoz.ai/) - Test environment
 
 ## 🎯 Project Goals
@@ -471,7 +485,7 @@ When adding new tests, create/update markdown documentation:
 ## 📧 Support & Contact
 
 For questions, issues, or contributions:
-- **Repository**: [Ideoz-E2E](https://github.com/OmarSayedQA/Ideoz-E2E)
+- **Repository**: [Ideoz-E2E](https://github.com/OmarSayedQA/Ideoz-Ai)
 - **Owner**: OmarSayedQA
 - **Issues**: Create a GitHub issue for bug reports or feature requests
 

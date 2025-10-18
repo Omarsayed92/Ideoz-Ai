@@ -8,7 +8,7 @@
     "generate:report": "allure generate allure-results -o allure-report --clean",
     "open:report": "allure open allure-report",
     "pretest": "npm run clean:report",
-    "posttest": "npm run generate:report && npm run open:report",
+    "posttest": "npm run generate:report ",
     "test": "npx playwright test --reporter=allure-playwright",
     "test:report": "npm run clean:report && npx playwright test --reporter=allure-playwright && npm run generate:report && npm run open:report"
   },

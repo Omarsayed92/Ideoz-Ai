@@ -1,0 +1,52 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - region "Notifications alt+T"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e10]
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - button "65 points remaining" [disabled] [ref=e20]:
+              - img [ref=e21]
+              - generic [ref=e24]:
+                - generic [ref=e25]: "65"
+                - text: points remaining
+            - button "What is Ideoz points?" [ref=e26] [cursor=pointer]:
+              - img
+              - generic [ref=e27]: What is Ideoz points?
+          - button "Login" [ref=e28] [cursor=pointer]
+          - button "Register for free" [ref=e29] [cursor=pointer]
+    - main [ref=e30]:
+      - generic [ref=e32]:
+        - heading "What problem are you working on now?" [level=2] [ref=e33]
+        - paragraph [ref=e34]: Uncover the right UX problem faster and smarter with Ideoz-AI
+        - generic [ref=e36]:
+          - generic [ref=e38]:
+            - img [ref=e39]
+            - button [ref=e41] [cursor=pointer]:
+              - img [ref=e42]
+          - generic [ref=e46]:
+            - img [ref=e47]
+            - button [ref=e51] [cursor=pointer]:
+              - img [ref=e52]
+          - generic [ref=e55]:
+            - textbox "Describe your user experience challenge …" [ref=e57]
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - generic [ref=e60]: Mode
+                - generic [ref=e61]: 🧠 Uncover
+              - generic [ref=e62]:
+                - button [ref=e63] [cursor=pointer]:
+                  - img
+                - button [disabled]:
+                  - img
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: Need a nudge? Try this prompt
+          - generic [ref=e67] [cursor=pointer]: How can I enhance user engagement by improving the visual hierarchy in my interface design?
+        - generic [ref=e68]:
+          - paragraph [ref=e69]: Looking for deeper insights? create a project free
+          - button "What is Ideoz project?" [ref=e71] [cursor=pointer]
+```

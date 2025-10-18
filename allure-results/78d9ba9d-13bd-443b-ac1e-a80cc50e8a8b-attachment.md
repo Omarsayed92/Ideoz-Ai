@@ -1,0 +1,96 @@
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - region "Notifications alt+T"
+      - generic:
+        - banner:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+            - generic:
+              - generic:
+                - button [disabled]:
+                  - img
+                  - generic:
+                    - generic: "65"
+                    - text: points remaining
+                - button:
+                  - img
+                  - generic: What is Ideoz points?
+              - button: Login
+              - button: Register for free
+        - main:
+          - generic:
+            - generic:
+              - heading [level=2]: What problem are you working on now?
+              - paragraph: Uncover the right UX problem faster and smarter with Ideoz-AI
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - button:
+                        - img
+                  - generic:
+                    - img
+                    - button:
+                      - img
+                  - generic:
+                    - generic:
+                      - textbox:
+                        - /placeholder: Describe your user experience challenge …
+                    - generic:
+                      - generic:
+                        - generic: Mode
+                        - generic: 🧠 Uncover
+                      - generic:
+                        - button:
+                          - img
+                        - button [disabled]:
+                          - img
+              - generic:
+                - paragraph: Need a nudge? Try this prompt
+                - generic:
+                  - generic: How can I improve the user flow to enhance overall engagement and reduce drop-off rates?
+              - generic:
+                - paragraph: Looking for deeper insights? create a project free
+                - generic:
+                  - button: What is Ideoz project?
+  - dialog [ref=e2]:
+    - generic:
+      - heading [level=2]
+    - generic [ref=e3]:
+      - button "Create account with Google" [active] [ref=e4] [cursor=pointer]:
+        - img
+        - text: Create account with Google
+      - generic [ref=e6]: Or create account with your email
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: Name
+        - textbox "Name" [ref=e10]:
+          - /placeholder: Enter your first and last name
+      - generic [ref=e11]:
+        - generic [ref=e12]: Email
+        - textbox "Email" [ref=e13]:
+          - /placeholder: Enter your email
+      - generic [ref=e14]:
+        - generic [ref=e15]: Password
+        - generic [ref=e16]:
+          - textbox "Password" [ref=e17]:
+            - /placeholder: ••••••••
+          - button [ref=e18] [cursor=pointer]:
+            - img [ref=e19]
+      - button "Create account" [ref=e23] [cursor=pointer]
+    - paragraph [ref=e25]:
+      - text: By creating an account, I agree with Ideoz's
+      - link "privacy policy" [ref=e26] [cursor=pointer]:
+        - /url: https://ideoz.ai/privacy-policy/
+    - paragraph [ref=e28]:
+      - text: Already have an account?
+      - button "Log in" [ref=e29] [cursor=pointer]
+```
