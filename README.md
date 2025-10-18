@@ -12,7 +12,7 @@ This project contains comprehensive end-to-end (E2E) automated tests for the **I
 - ✅ **Playwright Test Framework**: Modern, reliable, and fast end-to-end testing with auto-waiting
 - ✅ **Page Object Model (POM)**: Clean, maintainable test structure with reusable page objects
 - ✅ **Allure Reporting**: Beautiful, interactive test reports with screenshots, videos, and traces
-- ✅ **Cross-Browser Testing**: Configured for Chromium (extensible to Firefox, WebKit)
+- ✅ **Cross-Browser Testing**: Configured for Chromium .
 - ✅ **Comprehensive Documentation**: Detailed test suite markdown files for all modules
 - ✅ **Trace & Screenshots**: Automatic capture of test artifacts on failure for debugging
 - ✅ **Data-Driven Testing**: Externalized test data in JSON format for easy maintenance
@@ -28,11 +28,11 @@ Ideoz E2E/
 │   │   ├── Authonication/                          # Authentication test suites
 │   │   │   ├── CreateAccount.spec.ts               # 16 account creation tests
 │   │   │   ├── Login.spec.ts                       # 11 login functionality tests
-│   │   │   ├── Profile.spec.ts                     # 27 profile & more menu tests
+│   │   │   └── Profile.spec.ts                     # 27 profile & more menu tests
 │   │   │                
 │   │   └── Anonymous/                              # Anonymous user test suites
-│   │       ├── Landing.spec.ts                     # 13 landing page tests
-│   │       └── Upload-files-in-chat-area.spec.ts   # File upload tests
+│   │       └── Landing.spec.ts                     # 13 landing page tests
+│   │        
 │   ├── Page/                                       # Page Object Model
 │   │   ├── Createaccount.ts                        # Create account page object
 │   │   ├── Login.ts                                # Login page object
@@ -451,7 +451,7 @@ When adding new tests, create/update markdown documentation:
 
 ### Useful Links
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/) - TypeScript documentation
-- [GitHub Repository](https://github.com/OmarSayedQA/Ideoz-E2E) - Project repository
+- [GitHub Repository](https://github.com/OmarSayedQA/Ideoz-Ai) - Project repository
 - [Ideoz AI Application](https://app-test.ideoz.ai/) - Test environment
 
 ## 🎯 Project Goals
@@ -468,7 +468,7 @@ When adding new tests, create/update markdown documentation:
 ## 📧 Support & Contact
 
 For questions, issues, or contributions:
-- **Repository**: [Ideoz-E2E](https://github.com/OmarSayedQA/Ideoz-E2E)
+- **Repository**: [Ideoz-Ai](https://github.com/OmarSayedQA/Ideoz-Ai)
 - **Owner**: OmarSayedQA
 - **Issues**: Create a GitHub issue for bug reports or feature requests
 
