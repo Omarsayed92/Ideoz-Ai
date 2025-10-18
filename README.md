@@ -63,7 +63,7 @@ Ideoz E2E/
 | **Create Account** | 16 | ✅ Active | 100% |
 | **Profile & More Menu** | 27 | ✅ Active | 100%  |
 | **Landing Page** | 13 | ✅ Active | 100% |
-| **Total** | **67+** | ✅ Active | **~100%** |
+| **Total** | **67+** | ✅ Active | **100%** |
 
 ### 🔐 Authentication Tests (Login - 11 Tests)
 - ✅ Page redirection and element visibility
@@ -186,7 +186,7 @@ npx playwright test tests/E2E/Anonymous/Landing.spec.ts
 
 #### Run All Authentication Tests
 ```bash
-npx playwright test tests/E2E/Authonication/
+npx playwright test tests/E2E/Authentication/
 ```
 
 #### Run All Anonymous User Tests
