@@ -61,9 +61,9 @@ Ideoz E2E/
 |--------|-----------|--------|-----------|
 | **Login** | 11 | ✅ Active | 100% |
 | **Create Account** | 16 | ✅ Active | 100% |
-| **Profile & More Menu** | 27 | ✅ Active | 96% (26/27) |
+| **Profile & More Menu** | 27 | ✅ Active | 100%  |
 | **Landing Page** | 13 | ✅ Active | 100% |
-| **Total** | **67+** | ✅ Active | **~99%** |
+| **Total** | **67+** | ✅ Active | **~100%** |
 
 ### 🔐 Authentication Tests (Login - 11 Tests)
 - ✅ Page redirection and element visibility
