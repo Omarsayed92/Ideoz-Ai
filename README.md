@@ -31,8 +31,8 @@ Ideoz E2E/
 │   │   │   └── Profile.spec.ts                     # 27 profile & more menu tests
 │   │   │                
 │   │   └── Anonymous/                              # Anonymous user test suites
-│   │       ├── Landing.spec.ts                     # 13 landing page tests
-│   │       └── Upload-files-in-chat-area.spec.ts   # File upload tests
+│   │       └── Landing.spec.ts                     # 13 landing page tests
+│   │        
 │   ├── Page/                                       # Page Object Model
 │   │   ├── Createaccount.ts                        # Create account page object
 │   │   ├── Login.ts                                # Login page object
@@ -63,7 +63,7 @@ Ideoz E2E/
 | **Create Account** | 16 | ✅ Active | 100% |
 | **Profile & More Menu** | 27 | ✅ Active | 100%  |
 | **Landing Page** | 13 | ✅ Active | 100% |
-| **Total** | **67+** | ✅ Active | **~99%** |
+| **Total** | **67+** | ✅ Active | **100%** |
 
 ### 🔐 Authentication Tests (Login - 11 Tests)
 - ✅ Page redirection and element visibility
@@ -481,7 +481,7 @@ When adding new tests, create/update markdown documentation:
 ## 📧 Support & Contact
 
 For questions, issues, or contributions:
-- **Repository**: [Ideoz-E2E](https://github.com/OmarSayedQA/Ideoz-E2E)
+- **Repository**: [Ideoz-Ai](https://github.com/OmarSayedQA/Ideoz-Ai)
 - **Owner**: OmarSayedQA
 - **Issues**: Create a GitHub issue for bug reports or feature requests
 
