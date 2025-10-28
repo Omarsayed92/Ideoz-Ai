@@ -126,6 +126,23 @@ Ideoz-AI-E2E/
 └── 📄 README.md                         # This file
 ```
 
+#### 🗂️ Expanded Project Architecture Table
+
+| Folder/File                | Description                                      |
+|----------------------------|--------------------------------------------------|
+| `tests/E2E/Authentication/`| Authentication test specs (Login, CreateAccount, Profile) |
+| `tests/E2E/Anonymous/`     | Anonymous user test specs (Landing, Anonymous-Register) |
+| `tests/E2E/Project/`       | Project management test specs (create, view, update, delete, upload) |
+| `tests/E2E/Chat/`          | Chat and file attachment test specs              |
+| `tests/Fixtures/`          | Page Object Model (POM) files for all major pages|
+| `tests/Test Cases/`        | Markdown documentation for each test suite       |
+| `playwright-report/`       | Playwright HTML reports                          |
+| `test-results/`            | Test artifacts: traces, videos, screenshots      |
+| `playwright.config.ts`     | Playwright configuration file                    |
+| `package.json`             | Project dependencies and scripts                 |
+| `tsconfig.json`            | TypeScript configuration                        |
+| `README.md`                | Project documentation                           |
+
 
 
 ---
@@ -852,25 +869,47 @@ We appreciate contributions in these areas:
 
 ### 📖 Official Documentation
 
+
 <table>
 <tr>
-<td width="50%">
-
-#### Playwright Resources
-- 🎭 [Playwright Documentation](https://playwright.dev/)
-- 📘 [Playwright API Reference](https://playwright.dev/docs/api/class-playwright)
-- 🏗️ [Page Object Model Pattern](https://playwright.dev/docs/pom)
-- 🔍 [Playwright Selectors](https://playwright.dev/docs/selectors)
-- ⚡ [Best Practices](https://playwright.dev/docs/best-practices)
-- 🔧 [Configuration](https://playwright.dev/docs/test-configuration)
-- 🐛 [Debugging Guide](https://playwright.dev/docs/debug)
-
-</td>
-<td width="50%">
-
-
-
-</td>
+<th>Resource</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+<tr>
+<td>🎭 Playwright Documentation</td>
+<td>Official Playwright docs and guides</td>
+<td><a href="https://playwright.dev/">playwright.dev</a></td>
+</tr>
+<tr>
+<td>📘 Playwright API Reference</td>
+<td>Comprehensive API reference for Playwright</td>
+<td><a href="https://playwright.dev/docs/api/class-playwright">API Reference</a></td>
+</tr>
+<tr>
+<td>🏗️ Page Object Model Pattern</td>
+<td>Best practices for POM in Playwright</td>
+<td><a href="https://playwright.dev/docs/pom">POM Docs</a></td>
+</tr>
+<tr>
+<td>🔍 Selectors</td>
+<td>Selector strategies and usage</td>
+<td><a href="https://playwright.dev/docs/selectors">Selectors</a></td>
+</tr>
+<tr>
+<td>⚡ Best Practices</td>
+<td>Recommended Playwright practices</td>
+<td><a href="https://playwright.dev/docs/best-practices">Best Practices</a></td>
+</tr>
+<tr>
+<td>🔧 Configuration</td>
+<td>Configuring Playwright projects</td>
+<td><a href="https://playwright.dev/docs/test-configuration">Configuration</a></td>
+</tr>
+<tr>
+<td>🐛 Debugging Guide</td>
+<td>Debugging Playwright tests</td>
+<td><a href="https://playwright.dev/docs/debug">Debugging</a></td>
 </tr>
 </table>
 
