@@ -4,7 +4,7 @@
 **Module:** Authentication - Account Creation  
 **Test File:** `tests/E2E/Authonication/CreateAccount.spec.ts`  
 **Total Test Cases:** 16  
-**Status:** ✅ Active  
+**Status:** ✅ Passed  
 **Last Updated:** October 18, 2025
 
 ---
@@ -544,29 +544,7 @@ Verify that password field has toggle functionality to show/hide password.
 
 ---
 
-## Test Data Dependencies
 
-**File:** `TestData/testUsers.json`
-
-```json
-{
-  "users": [
-    {
-      "name": "Test User",
-      "email": "testuser@example.com",
-      "existingEmail": "testtt@example.com",
-      "password": "Test@123",
-      "shortPassword": "Test@1",
-      "noNumber": "Test@abc",
-      "noUppercase": "test@123",
-      "noLowercase": "TEST@123",
-      "noSpecialChar": "Test1234"
-    }
-  ]
-}
-```
-
----
 
 ## Page Object Model
 

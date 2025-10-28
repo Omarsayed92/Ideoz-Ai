@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "npx playwright test",
+    "test:continue": "npx playwright test --pass-with-no-tests",
+    "test:all": "npx playwright test --max-failures=0",
+    "test:uploadFiles": "npx playwright test tests/E2E/Project/uploadFiles.spec.ts"
+  }
+}

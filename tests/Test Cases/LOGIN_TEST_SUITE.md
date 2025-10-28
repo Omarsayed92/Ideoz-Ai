@@ -3,9 +3,9 @@
 **Test Suite ID:** LOGIN-TS-001  
 **Module:** Authentication - Login  
 **Test File:** `tests/E2E/Authonication/Login.spec.ts`  
-**Total Test Cases:** 11  
-**Status:** ✅ Active  
-**Last Updated:** October 18, 2025
+**Total Test Cases:** 10 
+**Status:** ✅ Passed  
+**Last Updated:** October 26, 2025
 
 ---
 
@@ -97,8 +97,8 @@ Verify that user can successfully login with valid email and password credential
 - "Create new Project" button is visible
 
 **Test Data:**
-- Email: `testUsers.loginCredentials.validUser.email`
-- Password: `testUsers.loginCredentials.validUser.password`
+- Email: valid email address (e.g., user@example.com)
+- Password: valid password (e.g., YourPassword123!)
 
 **Status:** ✅ Passed
 
@@ -127,8 +127,8 @@ Verify that system shows validation error when user enters invalid email format.
 - Login button remains visible (form not submitted)
 
 **Test Data:**
-- Email: `testUsers.loginCredentials.invalidEmailFormats[0]`
-- Password: `testUsers.loginCredentials.validUser.password`
+- Email: invalid email format (e.g., invalidemail)
+- Password: valid password
 
 **Status:** ✅ Passed
 
@@ -155,8 +155,8 @@ Verify that system validates password field correctly without showing premature 
 - System allows submission attempt
 
 **Test Data:**
-- Email: `testUsers.users[0].email`
-- Password: `testUsers.users[0].shortPassword`
+- Email: valid email address
+- Password: short/invalid password
 
 **Status:** ✅ Passed
 
@@ -184,7 +184,7 @@ Verify that system shows error message when email field is left empty.
 
 **Test Data:**
 - Email: (empty)
-- Password: `testUsers.users[0].shortPassword`
+- Password: any password
 
 **Status:** ✅ Passed
 
@@ -211,7 +211,7 @@ Verify that system shows error message when password field is left empty.
 - Form is not submitted
 
 **Test Data:**
-- Email: `testUsers.loginCredentials.validUser.email`
+- Email: valid email address
 - Password: (empty)
 
 **Status:** ✅ Passed
@@ -239,8 +239,8 @@ Verify that system shows appropriate error message when user enters incorrect cr
 - User is not logged in
 
 **Test Data:**
-- Email: `testUsers.loginCredentials.invalidCredentials.email`
-- Password: `testUsers.loginCredentials.invalidCredentials.password`
+- Email: incorrect email address
+- Password: incorrect password
 
 **Status:** ✅ Passed
 
@@ -305,38 +305,15 @@ Verify that clicking "Sign Up" button navigates to Create Account page.
 
 | Status | Count | Percentage |
 |--------|-------|------------|
-| ✅ Passed | 11 | 100% |
+| ✅ Passed | 10 | 100% |
 | ❌ Failed | 0 | 0% |
 | ⏭️ Skipped | 0 | 0% |
-| **Total** | **11** | **100%** |
+| **Total** | **10** | **100%** |
 
 ---
 
 ## Test Data Dependencies
 
-**File:** `TestData/testUsers.json`
-
-```json
-{
-  "loginCredentials": {
-    "validUser": {
-      "email": "testtt@example.com",
-      "password": "P@ssw0rd123"
-    },
-    "invalidCredentials": {
-      "email": "validuser@example.com",
-      "password": "WrongPassword123!"
-    },
-    "invalidEmailFormats": [
-      "invalidemail",
-      "invalid@",
-      "@example.com"
-    ]
-  }
-}
-```
-
----
 
 ## Page Object Model
 

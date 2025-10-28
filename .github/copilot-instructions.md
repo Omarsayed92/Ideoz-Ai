@@ -1,7 +1,7 @@
 # Copilot Instructions for Ideoz AI Playwright E2E Test Suite
 
 ## Project Overview
-This codebase contains comprehensive end-to-end (E2E) automated tests for the Ideoz AI web application using the Playwright Test Framework. The suite covers authentication, profile management, anonymous user flows, and other critical user journeys. All tests are run against the test environment at https://app-test.ideoz.ai/.
+This codebase contains comprehensive end-to-end (E2E) automated tests for the Ideoz AI web application using the Playwright Test Framework. The suite covers authentication, profile management, anonymous user flows, and other critical user journeys. All tests are run against the test environment at http://localhost:3000/.
 
 ## Architecture & Key Components
 - **tests/E2E/**: Main directory for E2E test specs, organized by feature (Anonymous, Authentication, etc.).
@@ -38,7 +38,7 @@ This codebase contains comprehensive end-to-end (E2E) automated tests for the Id
 - **Test documentation:** Each suite has a corresponding markdown file in `tests/Test Cases/` describing scenarios and expected results.
 
 ## Integration Points
-- **External Service:** All tests target https://app-test.ideoz.ai/.
+- **External Service:** All tests target http://localhost:3000/.
 - **Reporting:** Allure is used for advanced reporting; see Playwright config for setup.
 
 ## Example: Using Page Object in a Test
@@ -48,7 +48,7 @@ import { CreateAccountPage } from '../../Page/Createaccount';
 
 test('Create account flow', async ({ page }) => {
   const createAccount = new CreateAccountPage(page);
-  await page.goto('https://app-test.ideoz.ai/');
+  await page.goto('http://localhost:3000/');
   await createAccount.createFreeAccountButton.click();
   await expect(createAccount.registrationDialog).toBeVisible();
 });

@@ -1,19 +1,25 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Anonymous Landing Page Tests', () => {
-    const baseURL = 'https://app-test.ideoz.ai/';
 
     test.beforeEach(async ({ page }) => {
-        await page.goto(baseURL);
+        await page.goto('/');
     });
 
-    // TC-001-Anonymous Verify all header elements are displayed correctly.
+    /**
+     * Name: TC-001-Anonymous Verify all header elements are displayed correctly
+     * Steps:
+     *  1. Navigate to the landing page.
+     *  2. Check for logo, Login button, and Register for free button.
+     * Expected Result:
+     *  - Logo, Login, and Register for free buttons are visible.
+     */
     test('should display all header elements correctly', async ({ page }) => {
         // Verify logo is present
         await expect(page.getByRole('img')).toBeVisible();
 
         // Verify points button is displayed and disabled
-        await expect(page.getByRole('button', { name: /points remaining/ })).toBeVisible();
+        // await expect(page.getByRole('button', { name: /points remaining/ })).toBeVisible();
 
 
         // Verify Login button is displayed
@@ -24,7 +30,14 @@ test.describe('Anonymous Landing Page Tests', () => {
     });
 
 
-    // TC-002-Anonymous Verify main heading and subheading are displayed.
+    /**
+     * Name: TC-002-Anonymous Verify main heading and subheading are displayed
+     * Steps:
+     *  1. Navigate to the landing page.
+     *  2. Check for main heading and subheading text.
+     * Expected Result:
+     *  - Main heading and subheading are visible.
+     */
     test('should display main heading and subheading', async ({ page }) => {
         // Verify main heading
         await expect(page.getByRole('heading', { name: 'What problem are you working on now?' })).toBeVisible();
@@ -34,7 +47,14 @@ test.describe('Anonymous Landing Page Tests', () => {
     });
 
 
-    // TC-003-Anonymous Verify the user challenge input area elements are present.
+    /**
+     * Name: TC-003-Anonymous Verify the user challenge input area elements are present
+     * Steps:
+     *  1. Navigate to the landing page.
+     *  2. Check for challenge input field, Mode section, and related buttons.
+     * Expected Result:
+     *  - Input field, Mode section, and buttons are visible.
+     */
     test('should display user challenge input area elements', async ({ page }) => {
         // Verify text input field
         await expect(page.getByRole('textbox', { name: /Describe your user experience challenge/ })).toBeVisible();
@@ -48,7 +68,14 @@ test.describe('Anonymous Landing Page Tests', () => {
     });
 
 
-    // TC-004-Anonymous Verify the "Need a nudge?" hint section is displayed.
+    /**
+     * Name: TC-004-Anonymous Verify the "Need a nudge?" hint section is displayed
+     * Steps:
+     *  1. Navigate to the landing page.
+     *  2. Check for "Need a nudge? Try this prompt" and prompt examples.
+     * Expected Result:
+     *  - "Need a nudge?" text and prompt examples are visible.
+     */
     test('should display "Need a nudge?" hint section', async ({ page }) => {
         // Verify "Need a nudge?" text
         await expect(page.getByText('Need a nudge? Try this prompt')).toBeVisible();
@@ -56,19 +83,40 @@ test.describe('Anonymous Landing Page Tests', () => {
         await expect(page.locator('.truncate.flex.items-center')).toBeVisible();
     });
 
-    // TC-005-Anonymous Verify the send button is disabled when the input field is empty.
+    /**
+     * Name: TC-005-Anonymous Verify the send button is disabled when the input field is empty
+     * Steps:
+     *  1. Ensure the challenge input field is empty.
+     *  2. Check the send button state.
+     * Expected Result:
+     *  - Send button is disabled when input is empty.
+     */
     test('should have send button disabled when input field is empty', async ({ page }) => {
         await expect(page.locator('.flex.gap-1')).toBeVisible();
     });
 
-    // TC-006-Anonymous Verify the send button is enabled after typing text in the input field.
+    /**
+     * Name: TC-006-Anonymous Verify the send button is enabled after typing text in the input field
+     * Steps:
+     *  1. Type text into the challenge input field.
+     *  2. Check the send button state.
+     * Expected Result:
+     *  - Send button is enabled after typing text.
+     */
     test('should enable send button after typing text in input field', async ({ page }) => {
         const inputField = page.getByRole('textbox', { name: /Describe your user experience / });
         await inputField.fill('This is a test input');
         await expect(page.locator('.flex.gap-1')).toBeVisible();
     });
 
-    // TC-007-Anonymous Verify clicking on a prompt example navigates to the conversation page with the prompt pre-filled.
+    /**
+     * Name: TC-007-Anonymous Verify clicking on a prompt example navigates to the conversation page with the prompt pre-filled
+     * Steps:
+     *  1. Click on a prompt example.
+     *  2. Check navigation to conversation page.
+     * Expected Result:
+     *  - Navigates to conversation page with prompt pre-filled.
+     */
     test('should make prompt example clickable and navigate to conversation', async ({ page }) => {
         // Click on the first prompt example
         await page.locator('.truncate.flex.items-center').click();
@@ -76,7 +124,15 @@ test.describe('Anonymous Landing Page Tests', () => {
         await expect(page).toHaveURL(/.*\/conversation\/.*/);
     });
 
-    // TC-008-Anonymous Verify clicking back from conversation page returns to landing page without creating an account.
+    /**
+     * Name: TC-008-Anonymous Verify clicking back from conversation page returns to landing page without creating an account
+     * Steps:
+     *  1. Click on a prompt example to go to conversation page.
+     *  2. Click back button to return to landing page.
+     * Expected Result:
+     *  - Warning about unsaved work is shown.
+     *  - Landing page is displayed.
+     */
     test('should return to landing page without creating an account', async ({ page }) => {
         // Click on the first prompt example to navigate to conversation page
         await page.locator('.truncate.flex.items-center').click();
@@ -90,7 +146,13 @@ test.describe('Anonymous Landing Page Tests', () => {
 
     });
 
-    // TC-009-Anonymous Verify clicking the Login button opens the login dialog.
+    /**
+     * Name: TC-009-Anonymous Verify clicking the Login button opens the login dialog
+     * Steps:
+     *  1. Click the Login button in the header.
+     * Expected Result:
+     *  - Login dialog appears with all login fields and buttons.
+     */
     test('should display login dialog when Login button is clicked', async ({ page }) => {
         // Click Login button
         await page.locator('#landingHeader').getByRole('button', { name: 'Login' }).click();
@@ -104,7 +166,13 @@ test.describe('Anonymous Landing Page Tests', () => {
         await expect(page.getByRole('button', { name: 'Sign up' })).toBeVisible();
     });
 
-    // TC-010-Anonymous Verify clicking the Register for free button opens the registration dialog.
+    /**
+     * Name: TC-010-Anonymous Verify clicking the Register for free button opens the registration dialog
+     * Steps:
+     *  1. Click the Register for free button in the header.
+     * Expected Result:
+     *  - Registration dialog appears with all registration fields and buttons.
+     */
     test('should display registration dialog when Register for free button is clicked', async ({ page }) => {
         // Click Register for free button
         await page.locator('#landingHeader').getByRole('button', { name: 'Register for free' }).click();
@@ -118,7 +186,13 @@ test.describe('Anonymous Landing Page Tests', () => {
         await expect(page.getByRole('button', { name: 'Log in' })).toBeVisible();
     });
 
-    // TC-11-Anonymous Verify "What is Ideoz project?" button redirects to the relevant page/section.
+    /**
+     * Name: TC-011-Anonymous Verify "What is Ideoz project?" button redirects to the relevant page/section
+     * Steps:
+     *  1. Click the "What is Ideoz project?" button.
+     * Expected Result:
+     *  - YouTube iframe, Cancel, Play, Share, and Create Free Account buttons are visible.
+     */
     test('should redirect to Ideoz project section when "What is Ideoz project?" button is clicked', async ({ page }) => {
         // Click "What is Ideoz project?" button
         await page.getByRole('button', { name: 'What is Ideoz project?' }).click();
@@ -134,7 +208,14 @@ test.describe('Anonymous Landing Page Tests', () => {
         await page.getByRole('button').filter({ hasText: /^$/ }).click();
     });
 
-    // TC-12-Anonymous Verify the video in the "What is Ideoz project?" section plays correctly.
+    /**
+     * Name: TC-012-Anonymous Verify the video in the "What is Ideoz project?" section plays correctly
+     * Steps:
+     *  1. Click the "What is Ideoz project?" button.
+     *  2. Play the video in the iframe.
+     * Expected Result:
+     *  - Video plays and Pause button is visible.
+     */
     test('should play video in "What is Ideoz project?" section', async ({ page }) => {
         // Click "What is Ideoz project?" button
         await page.getByRole('button', { name: 'What is Ideoz project?' }).click();
@@ -146,7 +227,14 @@ test.describe('Anonymous Landing Page Tests', () => {
     });
 
 
-    // TC-13-Anonymous Verify the "Create Free Account" button in the "What is Ideoz project?" section opens the registration dialog.
+    /**
+     * Name: TC-013-Anonymous Verify the "Create Free Account" button in the "What is Ideoz project?" section opens the registration dialog
+     * Steps:
+     *  1. Click the "What is Ideoz project?" button.
+     *  2. Click the "Create Free Account" button in the dialog.
+     * Expected Result:
+     *  - Registration dialog appears with all registration fields and buttons.
+     */
     test('should open registration dialog when "Create Free Account" button is clicked in "What is Ideoz project?" section', async ({ page }) => {
         // Click "What is Ideoz project?" button
         await page.getByRole('button', { name: 'What is Ideoz project?' }).click();

@@ -1,24 +1,55 @@
 {
   "name": "ideoz-e2e",
   "version": "1.0.0",
-  "description": "",
+  "description": "Comprehensive Playwright E2E test suite for Ideoz AI web application, featuring Allure reporting, POM, and CI/CD integration.",
   "main": "index.js",
   "scripts": {
-    "clean:report": "rimraf allure-report allure-results && mkdirp allure-report allure-results",
+    "clean:report": "rimraf allure-report allure-results playwright-report test-results",
     "generate:report": "allure generate allure-results -o allure-report --clean",
     "open:report": "allure open allure-report",
     "pretest": "npm run clean:report",
-    "posttest": "npm run generate:report ",
+    "posttest": "npm run generate:report",
     "test": "npx playwright test --reporter=allure-playwright",
-    "test:report": "npm run clean:report && npx playwright test --reporter=allure-playwright && npm run generate:report && npm run open:report"
+    "test:report": "npm run clean:report && npx playwright test --reporter=allure-playwright && npm run generate:report && npm run open:report",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:login": "npx playwright test tests/E2E/Authonication/Login.spec.ts",
+    "test:create-account": "npx playwright test tests/E2E/Authonication/CreateAccount.spec.ts",
+    "test:profile": "npx playwright test tests/E2E/Authonication/Profile.spec.ts",
+    "test:landing": "npx playwright test tests/E2E/Anonymous/Landing.spec.ts",
+    "test:anonymous": "npx playwright test tests/E2E/Anonymous/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "allure",
+    "automation",
+    "typescript",
+    "pomm",
+    "ci",
+    "cd",
+    "qa",
+    "ideoz-ai"
+  ],
+  "author": "Omar Sayed <omarsayedqa@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OmarSayedQA/Ideoz-Ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OmarSayedQA/Ideoz-Ai/issues"
+  },
+  "homepage": "https://github.com/OmarSayedQA/Ideoz-Ai#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.56.0",
-    "@types/node": "^24.7.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.1",
     "allure-playwright": "^3.4.1",
     "mkdirp": "^3.0.1",
     "rimraf": "^6.0.1"

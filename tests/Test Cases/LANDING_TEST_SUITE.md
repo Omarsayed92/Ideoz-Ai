@@ -30,7 +30,7 @@ Verify that all header elements are displayed correctly on the Landing page for 
 - User navigates to application home page
 
 **Test Steps:**
-1. Navigate to application home page (https://app-test.ideoz.ai/)
+1. Navigate to application home page 
 2. Verify logo is visible
 3. Verify "points remaining" button is visible
 4. Verify Login button is visible
@@ -44,7 +44,7 @@ Verify that all header elements are displayed correctly on the Landing page for 
 - All header elements are properly aligned
 
 **Test Data:**
-- URL: `https://app-test.ideoz.ai/`
+- URL: 
 
 **Status:** ✅ Passed
 
@@ -531,7 +531,7 @@ Verify that clicking "Create Free Account" button in the "What is Ideoz project?
 
 ### Base URL
 ```typescript
-const baseURL = 'https://app-test.ideoz.ai/';
+
 ```
 
 ### Key Selectors Used
@@ -613,7 +613,7 @@ playVideo(): Promise<void>
 ## Test Data Dependencies
 
 ### Environment Variables
-- `BASE_URL`: https://app-test.ideoz.ai/
+- 
 
 ### No External Test Data Required
 This test suite is designed for anonymous users and does not require:
@@ -795,5 +795,5 @@ Creating a dedicated Page Object file would improve:
 
 **Document Version:** 1.0  
 **Created By:** QA Automation Team  
-**Review Date:** October 18, 2025  
+**Review Date:** October 26, 2025  
 

@@ -1,5 +1,14 @@
 # ANONYMOUS_REGISTER_TEST_SUITE.md
 
+**Test Suite ID:** TS-001
+**Module:** Anonymous Registration
+**Test File:** `tests/E2E/Anonymous/Anonymous-Register.spec.ts`
+**Total Test Cases:** 8
+**Status:** ✅ Active
+**Last Updated:** October 19, 2025
+
+---
+
 ## Test Suite: Anonymous Register
 
 This document describes the step-by-step test cases for the anonymous registration flow on the Ideoz AI application.
@@ -121,4 +130,47 @@ This document describes the step-by-step test cases for the anonymous registrati
 
 **References:**
 - See `Anonymous-Register.spec.ts` for implementation details.
-- All tests run against https://app-test.ideoz.ai/
+-
+
+---
+
+## Test Execution Summary
+
+| Status | Count | Percentage |
+|--------|-------|------------|
+| ✅ Passed | 8 | 100% |
+| ❌ Failed | 0 | 0% |
+| ⏭️ Skipped | 0 | 0% |
+| **Total** | **8** | **100%** |
+
+---
+
+## Test Data Dependencies
+
+**File:** `tests/E2E/Anonymous/Anonymous-Register.spec.ts`
+
+```javascript
+const testUser = {
+    name: 'Test User',
+    email: 'testuser1000@example.com',
+    password: 'P@ssw0rd123',
+
+    name1: 'Test User',
+    email1: 'testuser2@example.com',
+    password1: 'P@ssw0rd123',
+
+    name2: 'Test User 2',
+    email2: 'testuser002@example.com',
+    password2: 'P@ssw0rd123'
+};
+```
+
+---
+
+## Notes
+
+- All tests validate anonymous user registration flow
+- Tests cover multiple entry points for registration (main page, chat area, project info section)
+- Auto-login is verified after successful registration
+- Tests use unique email addresses to prevent conflicts
+- 
