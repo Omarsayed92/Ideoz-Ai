@@ -1,6 +1,6 @@
 <div align="center">
 
-# Ideoz AI - End-to-End Testing Suite
+# Ideoz AI - End-to-End Testing 
 
 ## 🌟 Overview
 
@@ -76,12 +76,12 @@ Ideoz-AI-E2E/
 │   ├── 📂 E2E/                          # Test Specifications
 │   │   ├── 📂 Authentication/            # Authentication Tests
 │   │   │   ├── Login.spec.ts            # Login flow tests (11 tests)
-│   │   │   ├── CreateAccount.spec.ts    # Account creation tests (16 tests)
-│   │   │   └── Profile.spec.ts          # Profile & menu tests (27 tests)
+│   │   │   ├── CreateAccount.spec.ts    # Account creation tests (16 
+│   │   │   └── Profile.spec.ts          # Profile & menu tests (27 
 │   │   │
 │   │   ├── 📂 Anonymous/                 # Anonymous User Tests
 │   │   │   ├── Landing.spec.ts          # Landing page tests (13 tests)
-│   │   │   └── Anonymous-Register.spec.ts # Registration tests (8 tests)
+│   │   │   └── Anonymous-Register.spec.ts # Registration tests (8 
 │   │   │
 │   │   ├── 📂 Project/                   # Project Management Tests
 │   │   │   ├── createProject.spec.ts    # Project creation tests
@@ -91,7 +91,7 @@ Ideoz-AI-E2E/
 │   │   │   └── uploadFiles.spec.ts      # File upload tests
 │   │   │
 │   │   └── 📂 Chat/                      # Chat Functionality Tests
-│   │       └── attachment-File-In-Chat-Input.spec.ts # File attachment tests
+│   │       └── attachment-File-In-Chat-Input.spec.ts # File attachment 
 │   │
 │   ├── 📂 Fixtures/                     # Page Object Models (POMs)
 │   │   ├── Login.ts                     # Login page object
