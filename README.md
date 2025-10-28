@@ -69,7 +69,7 @@ The **Ideoz AI E2E Testing Suite** is an enterprise-grade test automation framew
 
 ## 📁 Project Architecture
 
-```plaintext
+```text
 Ideoz-AI-E2E/
 │
 ├── 📂 tests/
