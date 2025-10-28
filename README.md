@@ -391,7 +391,7 @@ This will install:
 npx playwright install
 
 # Or install specific browser only
-npx playwright install chromium
+npx playwright install chromium --with-deps
 ```
 
 ### Step 4: Verify Installation
@@ -853,7 +853,7 @@ We appreciate contributions in these areas:
 <td>Install browser binaries</td>
 </tr>
 <tr>
-<td><code>npx playwright install chromium</code></td>
+<td><code>npx playwright install chromium --with-deps</code></td>
 <td>Install specific browser</td>
 </tr>
 <tr>
@@ -958,8 +958,11 @@ We appreciate contributions in these areas:
 ### 👥 Project Team
 
 **Author**: Omar Sayed
-**Email**: omarsayedqa@gmail.com
+
+**Email**: omaaraly1992@gmail.com
+
 **GitHub**: [@Omarsayed92](https://github.com/Omarsayed92)
+
 **Repository**: [Ideoz-Ai](https://github.com/Omarsayed92/Ideoz-Ai)
 
 </td>
