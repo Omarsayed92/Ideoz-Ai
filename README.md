@@ -75,13 +75,13 @@ Ideoz-AI-E2E/
 ├── 📂 tests/
 │   ├── 📂 E2E/                          # Test Specifications
 │   │   ├── 📂 Authentication/            # Authentication Tests
-│   │   │   ├── Login.spec.ts            # Login flow tests (11 tests)
-│   │   │   ├── CreateAccount.spec.ts    # Account creation tests (16 
-│   │   │   └── Profile.spec.ts          # Profile & menu tests (27 
+│   │   │   ├── Login.spec.ts            # Login flow tests 
+│   │   │   ├── CreateAccount.spec.ts    # Account creation tests 
+│   │   │   └── Profile.spec.ts          # Profile & menu tests 
 │   │   │
 │   │   ├── 📂 Anonymous/                 # Anonymous User Tests
-│   │   │   ├── Landing.spec.ts          # Landing page tests (13 tests)
-│   │   │   └── Anonymous-Register.spec.ts # Registration tests (8 
+│   │   │   ├── Landing.spec.ts          # Landing page tests 
+│   │   │   └── Anonymous-Register.spec.ts # Registration tests 
 │   │   │
 │   │   ├── 📂 Project/                   # Project Management Tests
 │   │   │   ├── createProject.spec.ts    # Project creation tests
