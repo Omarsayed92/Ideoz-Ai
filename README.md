@@ -156,7 +156,7 @@ Ideoz-AI-E2E/
 ### 🎯 Test Modules Breakdown
 
 <details>
-<summary><b>🔐 Authentication Module (54 Tests)</b></summary>
+<summary><b>🔐 Authentication Module (53 Tests)</b></summary>
 
 #### 1. Login Tests (10 Tests)
 **File**: `tests/E2E/Authentication/Login.spec.ts`
@@ -249,7 +249,7 @@ Ideoz-AI-E2E/
 </details>
 
 <details>
-<summary><b>📁 Project Management Module (15+ Tests)</b></summary>
+<summary><b>📁 Project Management Module (93 Tests)</b></summary>
 
 #### 1. Create Project Tests (13 Tests)
 **File**: `tests/E2E/Project/createProject.spec.ts`
@@ -301,7 +301,7 @@ Ideoz-AI-E2E/
 </details>
 
 <details>
-<summary><b>💬 Chat & File Upload Module (5+ Tests)</b></summary> 
+<summary><b>💬 Chat & File Upload Module (53 Tests)</b></summary> 
 
 #### Attachment File in Chat Input Tests (53 Tests)
 **File**: `tests/E2E/Chat/attachment-File-In-Chat-Input.spec.ts`
