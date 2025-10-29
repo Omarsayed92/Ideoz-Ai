@@ -421,7 +421,7 @@ If successful, you should see a browser window open and tests executing.
 
 <table>
 <tr>
-<td width="100%">
+<td width="50%">
 
 #### Run All Tests
 ```bash
@@ -430,7 +430,7 @@ npm test
 Runs all tests with Allure reporter
 
 </td>
-<td width="100%">
+<td width="50%">
 
 #### Complete Test Cycle
 ```bash
@@ -962,7 +962,8 @@ We appreciate contributions in these areas:
 
 <table>
 <tr>
-<td width="75%">
+<td width="50
+%">
 
 ### 👥 Project Team
 
@@ -975,7 +976,7 @@ We appreciate contributions in these areas:
 **Repository**: [Ideoz-Ai](https://github.com/Omarsayed92/Ideoz-Ai)
 
 </td>
-<td width="75%">
+<td width="50%">
 
 ### 🐛 Report Issues
 
@@ -989,13 +990,7 @@ We appreciate contributions in these areas:
 
 ---
 
-## 📜 License
 
-This project is licensed under the **MIT License** - see the LICENSE file for details.
-
-Copyright (c) 2025 Omar Sayed
-
----
 
 ## 🏆 Acknowledgments
 
@@ -1033,9 +1028,20 @@ This project is built with industry-leading tools and frameworks:
 
 ---
 
+## 📜 License
+
+This project is licensed under the **MIT License** - see the LICENSE file for details.
+
+Copyright (c) 2025 Omar Sayed
+
+---
+
 **Project**: Ideoz AI E2E Test Suite
+
 **Version**: 1.0.0
+
 **Last Updated**: October 28, 2025
+
 **Status**: ✅ Actively Maintained
 
 Made with ❤️ by [Omar Sayed](https://github.com/Omarsayed92)
