@@ -1,5 +1,6 @@
 <div align="center">
-# Ideoz AI - End-to-End Testing 
+
+## Ideoz AI - End-to-End Testing 
 </div >
 
 <div align="center">
@@ -7,6 +8,10 @@
 ## 🌟 Overview
 
 The **Ideoz AI E2E Testing Suite** is an enterprise-grade test automation framework built with **Playwright** and **TypeScript**. It provides comprehensive coverage of all critical user journeys across the Ideoz AI web application, including authentication flows, project management, chat functionality, and anonymous user interactions.
+
+</div >
+
+</div >
 
 ### 🎯 Project Objectives
 
