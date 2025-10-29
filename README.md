@@ -1027,6 +1027,7 @@ This project is built with industry-leading tools and frameworks:
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 </div>
 ---
+
 </div>
 ## 📜 License
 
