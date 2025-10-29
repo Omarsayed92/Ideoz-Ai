@@ -127,8 +127,8 @@ Ideoz-AI-E2E/
 │       └── ATTACHMENT_FILE_IN_CHAT_INPUT_TEST_SUITE.md
 │
 ├── 📂 playwright-report/                                    # Playwright HTML reports
-├── 📂 test-results/                                         # Test artifacts (traces, videos, screenshots)
-│
+├── 📂 test-results/                                         # Test artifacts 
+│                                                             (traces, videos, screenshots)
 ├── 📄 playwright.config.ts                                  # Playwright configuration
 ├── 📄 package.json                                          # Dependencies & NPM scripts
 ├── 📄 tsconfig.json                                         # TypeScript configuration
@@ -962,7 +962,7 @@ We appreciate contributions in these areas:
 
 <table>
 <tr>
-<td width="100%">
+<td width="75%">
 
 ### 👥 Project Team
 
@@ -975,7 +975,7 @@ We appreciate contributions in these areas:
 **Repository**: [Ideoz-Ai](https://github.com/Omarsayed92/Ideoz-Ai)
 
 </td>
-<td width="100%">
+<td width="75%">
 
 ### 🐛 Report Issues
 
@@ -1040,6 +1040,6 @@ This project is built with industry-leading tools and frameworks:
 
 Made with ❤️ by [Omar Sayed](https://github.com/Omarsayed92)
 
-[⬆ Back to Top](#Ideoz.AI.-.End-to-End.Testing ) 
+[⬆ Back to Top](#Ideoz.AI.-.End-to-End.Testing) 
 
 </div>
