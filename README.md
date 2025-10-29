@@ -1,6 +1,8 @@
 <div align="center">
 # Ideoz AI - End-to-End Testing 
-</div>
+</div >
+
+<div align="center">
 
 ## 🌟 Overview
 
@@ -17,6 +19,8 @@ The **Ideoz AI E2E Testing Suite** is an enterprise-grade test automation framew
 ### 🔗 Test Environment
 
 **Base URL**: `http://localhost:3000/`
+
+</div >
 
 ---
 
@@ -151,7 +155,7 @@ Ideoz-AI-E2E/
 
 ### 📊 Test Statistics Overview
 
-<div align="center">
+<div >
 
 | Module | Test Cases | Test Files | Status | Coverage |
 |--------|:----------:|:----------:|:------:|:--------:|
