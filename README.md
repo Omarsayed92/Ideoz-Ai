@@ -1,6 +1,6 @@
 <div align="center">
 
-## Ideoz AI - End-to-End Testing 
+## Ideoz AI - End-to-End Testing
 </div >
 
 <div >
@@ -421,7 +421,7 @@ If successful, you should see a browser window open and tests executing.
 
 <table>
 <tr>
-<td width="75%">
+<td width="100%">
 
 #### Run All Tests
 ```bash
@@ -430,7 +430,7 @@ npm test
 Runs all tests with Allure reporter
 
 </td>
-<td width="75%">
+<td width="100%">
 
 #### Complete Test Cycle
 ```bash
@@ -962,7 +962,7 @@ We appreciate contributions in these areas:
 
 <table>
 <tr>
-<td width="50%">
+<td width="100%">
 
 ### 👥 Project Team
 
@@ -975,7 +975,7 @@ We appreciate contributions in these areas:
 **Repository**: [Ideoz-Ai](https://github.com/Omarsayed92/Ideoz-Ai)
 
 </td>
-<td width="50%">
+<td width="100%">
 
 ### 🐛 Report Issues
 
@@ -1040,6 +1040,6 @@ This project is built with industry-leading tools and frameworks:
 
 Made with ❤️ by [Omar Sayed](https://github.com/Omarsayed92)
 
-[⬆ Back to Top](#ideoz-ai---end-to-end-testing-suite)
+[⬆ Back to Top](#Ideoz.AI.-.End-to-End.Testing ) 
 
 </div>
