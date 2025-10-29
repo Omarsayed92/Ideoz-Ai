@@ -1,6 +1,6 @@
 <div align="center">
-
 # Ideoz AI - End-to-End Testing 
+</div>
 
 ## 🌟 Overview
 
@@ -72,39 +72,39 @@ The **Ideoz AI E2E Testing Suite** is an enterprise-grade test automation framew
 ```text
 Ideoz-AI-E2E/
 │
-├── 📂 tests/                                 # Test root
-│   ├── 📂 E2E/                               # Test Specifications
-│   │   ├── 📂 Authentication/                # Authentication Tests
-│   │   │   ├── Login.spec.ts                # Login flow tests
-│   │   │   ├── CreateAccount.spec.ts        # Account creation tests
-│   │   │   └── Profile.spec.ts              # Profile & menu tests
+├── 📂 tests/                                             # Test root
+│   ├── 📂 E2E/                                           # Test Specifications
+│   │   ├── 📂 Authentication/                            # Authentication Tests
+│   │   │   ├── Login.spec.ts                              # Login flow tests
+│   │   │   ├── CreateAccount.spec.ts                      # Account creation tests
+│   │   │   └── Profile.spec.ts                            # Profile & menu tests
 │   │   │
-│   │   ├── 📂 Anonymous/                    # Anonymous User Tests
-│   │   │   ├── Landing.spec.ts              # Landing page tests
-│   │   │   └── Anonymous-Register.spec.ts   # Registration tests
+│   │   ├── 📂 Anonymous/                                  # Anonymous User Tests
+│   │   │   ├── Landing.spec.ts                             # Landing page tests
+│   │   │   └── Anonymous-Register.spec.ts                  # Registration tests
 │   │   │
-│   │   ├── 📂 Project/                      # Project Management Tests
-│   │   │   ├── createProject.spec.ts        # Project creation tests
-│   │   │   ├── viewProject.spec.ts          # Project viewing tests
-│   │   │   ├── update-Project-context.spec.ts# Update tests
-│   │   │   ├── DeleteProject.spec.ts        # Deletion tests
-│   │   │   └── uploadFiles.spec.ts          # File upload tests
+│   │   ├── 📂 Project/                                     # Project Management Tests
+│   │   │   ├── createProject.spec.ts                       # Project creation tests
+│   │   │   ├── viewProject.spec.ts                         # Project viewing tests
+│   │   │   ├── update-Project-context.spec.ts              # Update tests
+│   │   │   ├── DeleteProject.spec.ts                       # Deletion tests
+│   │   │   └── uploadFiles.spec.ts                         # File upload tests
 │   │   │
-│   │   └── 📂 Chat/                         # Chat Functionality Tests
-│   │       └── attachment-File-In-Chat-Input.spec.ts # File attachment
+│   │   └── 📂 Chat/                                        # Chat Functionality Tests
+│   │       └── attachment-File-In-Chat-Input.spec.ts        # File attachment
 │   │
-│   ├── 📂 Fixtures/                         # Page Object Models (POMs)
-│   │   ├── Login.ts                         # Login page object
-│   │   ├── Createaccount.ts                 # Create account page object
-│   │   ├── Profile.ts                       # Profile page object
-│   │   ├── CreateProject.ts                 # Create project page object
-│   │   ├── ViewProject.ts                   # View project page object
-│   │   ├── UpdateProjectContext.ts          # Update project page object
-│   │   ├── DeleteProject.ts                 # Delete project page object
-│   │   ├── UploadFile.ts                    # Upload file page object
-│   │   └── attachmentFile.ts                # File attachment page object
+│   ├── 📂 Fixtures/                                        # Page Object Models (POMs)
+│   │   ├── Login.ts                                         # Login page object
+│   │   ├── Createaccount.ts                                 # Create account page object
+│   │   ├── Profile.ts                                       # Profile page object
+│   │   ├── CreateProject.ts                                 # Create project page object
+│   │   ├── ViewProject.ts                                   # View project page object
+│   │   ├── UpdateProjectContext.ts                          # Update project page object
+│   │   ├── DeleteProject.ts                                 # Delete project page object
+│   │   ├── UploadFile.ts                                    # Upload file page object
+│   │   └── attachmentFile.ts                                # File attachment page object
 │   │
-│   └── 📂 Test Cases/                       # Test Documentation (Markdown)
+│   └── 📂 Test Cases/                                      # Test Documentation (Markdown)
 │       ├── LOGIN_TEST_SUITE.md
 │       ├── CREATE_ACCOUNT_TEST_SUITE.md
 │       ├── PROFILE_TEST_SUITE.md
@@ -117,13 +117,13 @@ Ideoz-AI-E2E/
 │       ├── UPLOAD_FILE_TEST_SUITE.md
 │       └── ATTACHMENT_FILE_IN_CHAT_INPUT_TEST_SUITE.md
 │
-├── 📂 playwright-report/                    # Playwright HTML reports
-├── 📂 test-results/                         # Test artifacts (traces, videos, screenshots)
+├── 📂 playwright-report/                                    # Playwright HTML reports
+├── 📂 test-results/                                         # Test artifacts (traces, videos, screenshots)
 │
-├── 📄 playwright.config.ts                  # Playwright configuration
-├── 📄 package.json                          # Dependencies & NPM scripts
-├── 📄 tsconfig.json                         # TypeScript configuration
-└── 📄 README.md                             # This file
+├── 📄 playwright.config.ts                                  # Playwright configuration
+├── 📄 package.json                                          # Dependencies & NPM scripts
+├── 📄 tsconfig.json                                         # TypeScript configuration
+└── 📄 README.md                                             # This file
 ```
 
 #### 🗂️ Expanded Project Architecture Table
