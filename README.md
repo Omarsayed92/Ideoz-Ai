@@ -1025,9 +1025,9 @@ This project is built with industry-leading tools and frameworks:
 ![Playwright](https://img.shields.io/badge/Playwright-1.56.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
-
+</div>
 ---
-
+</div>
 ## 📜 License
 
 This project is licensed under the **MIT License** - see the LICENSE file for details.
